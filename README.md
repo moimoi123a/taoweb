@@ -25,7 +25,7 @@ Website giới thiệu du lịch Việt Nam, thiết kế dạng **one-page full
 
 ## Tính năng
 
-- Menu cố định 10 mục, active theo section; menu hamburger toàn màn hình trên mobile
+- Menu cố định 11 mục, active theo section; menu hamburger toàn màn hình trên mobile
 - Scroll snap: mỗi lần lướt chuyển một trang; hỗ trợ phím ↑/↓, PageUp/PageDown
 - Thanh tiến trình cuộn, chấm điều hướng bên phải, nút về đầu trang
 - Animation: reveal khi vào màn, Ken Burns cho hero, đếm số liệu, hover ảnh
