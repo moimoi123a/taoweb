@@ -86,6 +86,11 @@
           d.classList.toggle("is-active", d.getAttribute("href") === "#" + id);
         });
 
+        if (id === "video") {
+          const embed = document.getElementById("video-embed");
+          if (embed && !embed.getAttribute("src")) embed.src = embed.dataset.src;
+        }
+
         const counter = $(".current-index");
         if (counter) {
           const idx = panels.indexOf(entry.target);

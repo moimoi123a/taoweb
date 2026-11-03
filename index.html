@@ -25,12 +25,12 @@
       <span class="brand-text"><strong>Việt Nam</strong><span>Travel Guide</span></span>
     </a>
     <nav class="main-nav" aria-label="Điều hướng chính">
-      <ul><li><a href="#home">Trang chủ</a></li><li><a href="#gioi-thieu">Giới thiệu</a></li><li><a href="#mien-bac">Miền Bắc</a></li><li><a href="#mien-trung">Miền Trung</a></li><li><a href="#mien-nam">Miền Nam</a></li><li><a href="#am-thuc">Ẩm thực</a></li><li><a href="#le-hoi">Lễ hội</a></li><li><a href="#kinh-nghiem">Kinh nghiệm</a></li><li><a href="#thu-vien">Thư viện</a></li><li><a href="#lien-he">Liên hệ</a></li></ul>
+      <ul><li><a href="#home">Trang chủ</a></li><li><a href="#video">Video</a></li><li><a href="#gioi-thieu">Giới thiệu</a></li><li><a href="#mien-bac">Miền Bắc</a></li><li><a href="#mien-trung">Miền Trung</a></li><li><a href="#mien-nam">Miền Nam</a></li><li><a href="#am-thuc">Ẩm thực</a></li><li><a href="#le-hoi">Lễ hội</a></li><li><a href="#kinh-nghiem">Kinh nghiệm</a></li><li><a href="#thu-vien">Thư viện</a></li><li><a href="#lien-he">Liên hệ</a></li></ul>
     </nav>
     <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false"><span></span></button>
   </header>
 
-  <nav class="side-dots" aria-label="Điều hướng nhanh"><a href="#home" aria-label="Trang chủ"><span>Trang chủ</span></a><a href="#gioi-thieu" aria-label="Giới thiệu"><span>Giới thiệu</span></a><a href="#mien-bac" aria-label="Miền Bắc"><span>Miền Bắc</span></a><a href="#mien-trung" aria-label="Miền Trung"><span>Miền Trung</span></a><a href="#mien-nam" aria-label="Miền Nam"><span>Miền Nam</span></a><a href="#am-thuc" aria-label="Ẩm thực"><span>Ẩm thực</span></a><a href="#le-hoi" aria-label="Lễ hội"><span>Lễ hội</span></a><a href="#kinh-nghiem" aria-label="Kinh nghiệm"><span>Kinh nghiệm</span></a><a href="#thu-vien" aria-label="Thư viện"><span>Thư viện</span></a><a href="#lien-he" aria-label="Liên hệ"><span>Liên hệ</span></a></nav>
+  <nav class="side-dots" aria-label="Điều hướng nhanh"><a href="#home" aria-label="Trang chủ"><span>Trang chủ</span></a><a href="#video" aria-label="Video"><span>Video</span></a><a href="#gioi-thieu" aria-label="Giới thiệu"><span>Giới thiệu</span></a><a href="#mien-bac" aria-label="Miền Bắc"><span>Miền Bắc</span></a><a href="#mien-trung" aria-label="Miền Trung"><span>Miền Trung</span></a><a href="#mien-nam" aria-label="Miền Nam"><span>Miền Nam</span></a><a href="#am-thuc" aria-label="Ẩm thực"><span>Ẩm thực</span></a><a href="#le-hoi" aria-label="Lễ hội"><span>Lễ hội</span></a><a href="#kinh-nghiem" aria-label="Kinh nghiệm"><span>Kinh nghiệm</span></a><a href="#thu-vien" aria-label="Thư viện"><span>Thư viện</span></a><a href="#lien-he" aria-label="Liên hệ"><span>Liên hệ</span></a></nav>
 
   <main>
     <!-- 01 · Trang chủ -->
@@ -44,7 +44,7 @@
         <p class="hero-lead">Từ những thửa ruộng bậc thang Tây Bắc đến bãi biển miền Nam, mỗi vùng đất là một câu chuyện — hãy để chúng tôi dẫn bạn đi.</p>
         <div class="hero-actions">
           <a class="btn btn--gold" href="#gioi-thieu">Bắt đầu hành trình</a>
-          <button class="btn btn--ghost" type="button" data-detail='{"title": "Việt Nam 4K — Hành trình qua Hạ Long, Hội An, Sa Pa", "image": "", "video": "wN0G0C66QJw", "desc": "Thước phim 4K đưa bạn qua những điểm đến đẹp nhất của Việt Nam.", "tag": "Video giới thiệu", "tags": ["4K", "YouTube", "Việt Nam"]}'>Xem video</button>
+          <button class="btn btn--ghost" type="button" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">Xem video</button>
         </div>
       </div>
       <div class="hero-stats">
@@ -56,10 +56,34 @@
         </dl>
         <span class="scroll-cue">Lướt để khám phá <i aria-hidden="true"></i></span>
       </div>
-      <span class="panel-index">01 / 10</span>
+      <span class="panel-index">01 / 11</span>
     </section>
 
-    <!-- 02 · Giới thiệu -->
+    <!-- 02 · Video -->
+    <section class="panel panel--dark video-panel" id="video" data-title="Video">
+      <div class="panel-inner">
+        <div class="section-head section-head--row reveal">
+          <div>
+            <span class="eyebrow">Thước phim</span>
+            <h2>Việt Nam qua <em>ống kính</em></h2>
+            <p>Hành trình một mình qua những cung đường, bãi biển và phố cổ — phát trực tiếp ngay tại đây.</p>
+          </div>
+          <span class="head-note"><b>4K</b> Cinematic</span>
+        </div>
+        <div class="video-stage reveal">
+          <div class="video-shell">
+            <iframe id="video-embed" data-src="https://www.youtube-nocookie.com/embed/NVNIdsK0ql4?autoplay=1&amp;mute=1&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="VIETNAM a Cinematic Solo Travel Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-meta">
+            <span>VIETNAM — A Cinematic Solo Travel Video · michisperspective</span>
+            <a href="https://youtu.be/NVNIdsK0ql4" target="_blank" rel="noopener">Xem trên YouTube ↗</a>
+          </div>
+        </div>
+      </div>
+      <span class="panel-index">02 / 11</span>
+    </section>
+
+    <!-- 03 · Giới thiệu -->
     <section class="panel panel--cream" id="gioi-thieu" data-title="Giới thiệu" data-animate-count="true">
       <div class="panel-inner">
         
@@ -124,7 +148,7 @@
           </article>
         </div>
       </div>
-      <span class="panel-index">02 / 10</span>
+      <span class="panel-index">03 / 11</span>
     </section>
 
     <!-- 03 · Miền Bắc -->
@@ -192,7 +216,7 @@
           </article>
         </div>
       </div>
-      <span class="panel-index">03 / 10</span>
+      <span class="panel-index">04 / 11</span>
     </section>
 
     <!-- 04 · Miền Trung -->
@@ -260,7 +284,7 @@
           </article>
         </div>
       </div>
-      <span class="panel-index">04 / 10</span>
+      <span class="panel-index">05 / 11</span>
     </section>
 
     <!-- 05 · Miền Nam -->
@@ -328,7 +352,7 @@
           </article>
         </div>
       </div>
-      <span class="panel-index">05 / 10</span>
+      <span class="panel-index">06 / 11</span>
     </section>
 
     <!-- 06 · Ẩm thực -->
@@ -416,7 +440,7 @@
           </article>
         </div>
       </div>
-      <span class="panel-index">06 / 10</span>
+      <span class="panel-index">07 / 11</span>
     </section>
 
     <!-- 07 · Lễ hội -->
@@ -484,7 +508,7 @@
           </article>
         </div>
       </div>
-      <span class="panel-index">07 / 10</span>
+      <span class="panel-index">08 / 11</span>
     </section>
 
     <!-- 08 · Kinh nghiệm -->
@@ -552,7 +576,7 @@
           </article>
         </div>
       </div>
-      <span class="panel-index">08 / 10</span>
+      <span class="panel-index">09 / 11</span>
     </section>
 
     <!-- 09 · Thư viện -->
@@ -614,7 +638,7 @@
           </figure>
         </div>
       </div>
-      <span class="panel-index">09 / 10</span>
+      <span class="panel-index">10 / 11</span>
     </section>
 
     <!-- 10 · Liên hệ -->
@@ -714,7 +738,7 @@
           <span>Ảnh: Wikimedia Commons · Video: YouTube</span>
         </footer>
       </div>
-      <span class="panel-index">10 / 10</span>
+      <span class="panel-index">11 / 11</span>
     </section>
   </main>
 
