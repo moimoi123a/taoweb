@@ -30,9 +30,20 @@
   /* ------------------------------- Mobile nav ------------------------------ */
   const navToggle = $(".nav-toggle");
 
-  function closeNav() {
-    document.body.classList.remove("nav-open");
+  function lockScroll() {
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+  }
+
+  function unlockScroll() {
     document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+  }
+
+  function closeNav() {
+    if (!document.body.classList.contains("nav-open")) return;
+    document.body.classList.remove("nav-open");
+    unlockScroll();
     if (navToggle) navToggle.setAttribute("aria-expanded", "false");
   }
 
@@ -40,7 +51,8 @@
     navToggle.addEventListener("click", () => {
       const open = document.body.classList.toggle("nav-open");
       navToggle.setAttribute("aria-expanded", String(open));
-      document.documentElement.style.overflow = open ? "hidden" : "";
+      if (open) lockScroll();
+      else unlockScroll();
     });
   }
 
@@ -48,6 +60,16 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeNav();
   });
+
+  document.addEventListener(
+    "touchmove",
+    (e) => {
+      if (!document.body.classList.contains("nav-open")) return;
+      if (e.target.closest(".main-nav")) return;
+      e.preventDefault();
+    },
+    { passive: false }
+  );
 
   /* --------------------------- Active panel tracking ----------------------- */
   const io = new IntersectionObserver(

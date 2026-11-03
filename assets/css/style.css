@@ -1263,12 +1263,17 @@ body.nav-open { overflow: hidden; }
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
     z-index: 95;
-    padding: 90px 24px 40px;
+    padding: calc(72px + env(safe-area-inset-top)) 24px calc(20px + env(safe-area-inset-bottom));
     overflow-y: auto;
   }
   body.nav-open .main-nav { opacity: 1; visibility: visible; }
-  .main-nav ul { flex-direction: column; gap: 4px; text-align: center; }
-  .main-nav a { font-size: 21px; font-family: var(--font-display); padding: 10px 12px; }
+  .main-nav ul { flex-direction: column; gap: 0; text-align: center; }
+  .main-nav a {
+    font-size: clamp(18px, 3.2vh, 22px);
+    line-height: 1.25;
+    font-family: var(--font-display);
+    padding: clamp(5px, 1.5vh, 11px) 12px;
+  }
 
   .panel { min-height: auto; padding-top: calc(var(--header-h) + 42px); padding-bottom: 46px; }
   .panel.hero { min-height: 100svh; padding: 0; }
