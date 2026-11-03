@@ -178,7 +178,14 @@ p { margin: 0; }
 body.nav-open .nav-toggle span { background: transparent; }
 body.nav-open .nav-toggle span::before { transform: translateY(7px) rotate(45deg); }
 body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45deg); }
-body.nav-open .site-header { z-index: 110; background: transparent; box-shadow: none; }
+body.nav-open .site-header {
+  z-index: 110;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+body.nav-open { overflow: hidden; }
 
 /* --------------------------------- Progress -------------------------------- */
 .scroll-progress {

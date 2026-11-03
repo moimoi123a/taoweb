@@ -32,6 +32,7 @@
 
   function closeNav() {
     document.body.classList.remove("nav-open");
+    document.documentElement.style.overflow = "";
     if (navToggle) navToggle.setAttribute("aria-expanded", "false");
   }
 
@@ -39,6 +40,7 @@
     navToggle.addEventListener("click", () => {
       const open = document.body.classList.toggle("nav-open");
       navToggle.setAttribute("aria-expanded", String(open));
+      document.documentElement.style.overflow = open ? "hidden" : "";
     });
   }
 
